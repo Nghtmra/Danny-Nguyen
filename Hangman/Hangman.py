@@ -64,7 +64,7 @@ def draw():
     for letter in letters:
         x, y, ltr, visible = letter
         if visible:
-            pygame.draw.circle(win, BLACK, (x, y), RADIUS, 100)
+            pygame.draw.circle(win, BLACK, (x, y), RADIUS, 1)
             text = LETTER_FONT.render(ltr, 0.5, BLACK)
             win.blit(text, (x - text.get_width()/2, y - text.get_height()/2))
 
