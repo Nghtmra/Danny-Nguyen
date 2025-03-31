@@ -1,0 +1,1 @@
+To run this pygame, download the code from GitHub, run the folder "Hangman" in Visual Studio Code and make sure you open the file "Hangman.py" in your VS, install the Python extension and run "pip" install pygame" in your terminal. After that you can run the game.
