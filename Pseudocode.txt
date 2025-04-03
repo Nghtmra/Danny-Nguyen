@@ -1,0 +1,91 @@
+# Initialize Pygame
+initialize Pygame
+
+# Set window dimensions
+set window width and height
+
+# Create the game window
+create game window with title "Hangman Game"
+
+# Button variables
+set button radius
+set gap between buttons
+create a list of letters (A-Z) with their positions and visibility status
+
+# Fonts
+set fonts for letters, words, and the title
+
+# Load images
+load hangman images (0-6)
+
+# Game variables
+set initial hangman status
+create a list of words to choose from
+select a random word from the list
+create an empty list for guessed letters
+
+# Colors
+define colors for white, black, and red
+
+# --- Functions ---
+# Draw function
+  fill the window with white
+  draw the title
+  create a string to display the word
+    for each letter in the word
+      if the letter is guessed, add it to the display string
+      else, add an underscore to the display string
+  draw the word on the screen
+  draw buttons for each letter
+    if the letter is visible
+      draw a circle for the button
+      draw the letter on the button
+  draw the current hangman image
+  update the display
+
+# Display message function
+  pause for 1 second
+  fill the window with white
+  draw the message on the screen
+  update the display
+  pause for 2 seconds
+
+# Set frames per second (FPS)
+set FPS
+
+# Create a clock object
+create a clock
+
+# Start the game loop
+while the game is running
+  limit the frame rate to FPS
+  handle events
+    if the event is quit
+      set game running to false
+    if the event is mouse click
+      get mouse position
+      for each letter
+        if the letter is visible
+          calculate distance from mouse click to letter
+          if distance is less than button radius
+            set letter visibility to false
+            add letter to guessed letters
+            if the letter is not in the word
+              increase hangman status
+  draw the game elements
+  check if the player has won
+    set won to true
+    for each letter in the word
+      if the letter is not guessed
+        set won to false
+        break
+  if the player has won
+    display a "You WON!" message
+    break out of the loop
+  if the player has lost
+    display a "You LOST!" message
+    break out of the loop
+
+# --- End of Game ---
+# Quit Pygame
+quit Pygame
